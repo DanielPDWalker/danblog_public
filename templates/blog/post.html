@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% block content %}
+    <div class="btn_holder">
+        <input type="button" value="Back" class="back_button" onclick="history.back(-1)" />
+    </div>     
+
+    <h2>{{ post.title }}</h2>
+
+    <h5>{{ post.date }}</h5>
+    
+    <h6 class="tags">Tags: {{ post.tags }}</h6>
+
+    <p class="card-text">{{ post.content|safe|linebreaks }}</p>
+
+    <div class="btn_holder">
+        <input type="button" value="Back" class="back_button" onclick="history.back(-1)" />
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+h1.blog_title {
+    padding-bottom: 2rem;
+}
+
+p.description {
+    padding-top: 1rem;
+}
+
+div.btn_holder {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+h6.info_line {
+    font-weight: normal;
+}
+
+h6.tags {
+    padding-bottom: 2rem;
+}
