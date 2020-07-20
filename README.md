@@ -1,5 +1,5 @@
 # danblog_public
-The public code for my blog, which can be found at www.dwalker.net.
+The public code for my blog, which can be found at www.danielpdwalker.com.
 
 Its a very simple django blog, hosted on digital ocean, with a postgresql database and making use of the built in admin area to add and maintain my blog posts.
 
