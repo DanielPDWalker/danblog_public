@@ -2,10 +2,14 @@
 
 {% block content %}
     {% for post in posts %}
-    <h3><a href="{% url 'post' post.id %}">{{ post.title }}</a></h3>
+    <h3><a href="{% url 'post' post.slug %}">{{ post.title }}</a></h3>
     <h5 class="info_line">{{ post.date|date:"d M Y"}}</h5>
-    <h6>Tags: {{ post.tags }}</h6>
-    <p class="description">{{ post.description }}... <a href="{% url 'post' post.id %}">Read Post</a> </p>
+    <h6>Tags: {% for tag in tag_list %}
+                {% if tag in post.tags %}
+                  <a href="{% url 'tag_search' tag %}">[{{ tag }}]</a>
+                {% endif %}
+              {% endfor %}</h6>
+    <p class="description">{{ post.description }}... <a href="{% url 'post' post.slug %}">Read Post</a> </p>
     <br>
     {% endfor %}
 

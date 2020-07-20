@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'f%uw-y713nxw#h@u@8pr$aoo!3-6&ug$wsh*7hjio&0++p_0a+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -69,22 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'danblog.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '', 
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -136,3 +120,9 @@ try:
     from .local_settings import *
 except ImportError:
     pass
+
+try:
+    from .dev_settings import *
+except ImportError:
+    pass
+

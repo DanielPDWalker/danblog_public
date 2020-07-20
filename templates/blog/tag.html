@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+    <h2>Search for posts via their tags</h2>
+    <br>    
+    <h4 class="tags">Tags:</h4>
+    {% for tag in tag_list %}
+        <h6><a href="{% url 'tag_search' tag %}">{{ tag }}</a></h6>
+    {% endfor %}
+
+
+    <div class="btn_holder">
+        <input type="button" value="Back" class="back_button" onclick="history.back(-1)" />
+    </div>
+{% endblock %}

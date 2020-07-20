@@ -10,9 +10,9 @@
     <!-- My Custom CSS -->
     <link rel="stylesheet" href="{% static 'blog/css/123.css' %}">
     {% if post %}
-      <title>Dan.W's Blog - {{ post.title }}</title>
+      <title>Dan Walker's Blog - {{ post.title }}</title>
     {% else %}
-    <title>Dan.W's Blog</title>
+    <title>Dan Walker's Blog</title>
     {% endif %}
   </head>
   <body>
@@ -26,11 +26,18 @@
           
         </div>
         <div class="col-8">
-          <h1 class="blog_title">Dan.W's Blog</h1>
+          <h1 class="blog_title">Dan Walker's Blog</h1>
+          <div class="container text-center">
+            <h4 id="navbar">
+              <a href="{% url 'index' %}">[Home]</a> |
+              <a href="https://github.com/DanielPDWalker" target="_blank">[Github]</a> |
+              <a href="https://twitter.com/DanielPDWalker" target="_blank">[Contact]</a> (Twitter) |
+              <a href="{% url 'tag' %}">[Search Post Tags]</a>
+            </h4>
+          </div>
+          <br>
+          <br>
           {% block content %} {% endblock %}
-        </div>
-        <div class="col-2">
-          
         </div>
       </div>
     
